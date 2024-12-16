@@ -1,0 +1,17 @@
+.heading{
+    font-size: 3.5rem;
+    text-decoration: underline;
+}
+
+
+.paragraph{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: purple
+
+}
+
+.greenColor{
+    color: green;
+}
+
