@@ -4,16 +4,21 @@ import {useEffect, useState} from "react";
 
 const TopicsOverview =()=>{
 
-    console.log("topics", topics);
     const [posts, setPosts] = useState([]);
 
+
+
     useEffect(()=>{
-            console.log("effect runs")
+        console.log("effect runs");
+
         fetch("https://jsonplaceholder.typicode.com/posts")
-        .then(response=>response.json()).then(data => setPosts(data))
+            .then(response=>response.json())
+            .then(data => setPosts(data))
 
 
     },[])
+
+
 
     // create a list of topic items => map returned new Array
     const TopicsList = posts.map((post)=>{
@@ -22,7 +27,6 @@ const TopicsOverview =()=>{
 
     })
 
-    console.log("TopicList", TopicsList)
 
     return <>{TopicsList}</>
 }
